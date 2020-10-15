@@ -18,6 +18,6 @@
             this.Hely = Hely;
             this.Idopont = Idopont;
         }
-
+       
     }
 }
