@@ -31,7 +31,7 @@ namespace kosar20042_0
 
             Console.WriteLine($"Real Madrid: Hazai: {hazaiDb}, Vendég: {idegenDb}");
 
-            //if-es megoldás
+            //if-es megoldása
 
             //int hazai = 0;
             //int vendeg = 0;
