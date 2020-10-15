@@ -11,7 +11,7 @@ namespace kosar20042_0
         static List<Meccs> merkozesek = new List<Meccs>();
         static void MasodikFeladat()
         {
-
+            s
         }
         static void Main(string[] args)
         {
