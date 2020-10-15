@@ -17,11 +17,12 @@ namespace kosar20042_0
             while (!file.EndOfStream)
             {
                 string[] adat = file.ReadLine().Split(';');
-                merkozesek.Add(new Meccs(adat[0], adat[1],Convert.ToInt32(adat[2]), Convert.ToInt32(adat[3]), adat[4], adat[5]));
+                merkozesek.Add(new Meccs(adat[0], adat[1], Convert.ToInt32(adat[2]), Convert.ToInt32(adat[3]), adat[4], adat[5]));
             }
         }
         static void HarmadikFeladat()
         {
+            Console.WriteLine("3. Feladat");
             //select-es megoldás
             var hazai = from m in merkozesek where m.Hazai == "Real Madrid" select m;
             int hazaiDb = hazai.ToList().Count;
@@ -48,13 +49,40 @@ namespace kosar20042_0
 
             //}
             // Console.WriteLine($"Real Madrid: Hazai: {hazai}, Vendég: {vendeg}");
+            Console.WriteLine();
 
         }
-        static void 
+        static void NegyedikFeladat()
+        {
+            Console.WriteLine("4. Feladat");
+            //if-es megoldás
+            bool dontetlen = false;
+            foreach (var i in merkozesek)
+            {
+                if (i.HPont == i.IPont)
+                {
+                    dontetlen = true;
+                }
+                else
+                {
+                    dontetlen = false;
+                }
+            }
+            if (dontetlen==true)
+            {
+                Console.WriteLine("Volt döntetlen? Igen.");
+            }
+            else
+            {
+                Console.WriteLine("Volt döntetlen? Nem.");
+            }
+            Console.WriteLine();
+        }
         static void Main(string[] args)
         {
             MasodikFeladat();
             HarmadikFeladat();
+            NegyedikFeladat();
             Console.ReadKey();
         }
     }
