@@ -18,6 +18,10 @@
             this.Hely = Hely;
             this.Idopont = Idopont;
         }
+        public string Eredmeny()
+        {
+            return Hazai + "-" + Idegen + " " + HPont + ":" + IPont;
+        }
        
     }
 }
